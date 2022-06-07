@@ -17,7 +17,12 @@ export class ProductsListComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    
     this.products=this.productsService.products;
+  }
+
+  public deleteProduct(n:number){
+    this.productsService.deleteProduct(n);
   }
 
 }

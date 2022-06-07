@@ -14,9 +14,11 @@ export class NewProductComponent implements OnInit {
   constructor(private productsService:ProductsService) { }
 
   ngOnInit(): void {
+    
   }
 
   public addProduct(){
+      console.log(this.name+" "+this.quantity);
       this.productsService.addProduct(this.name,this.quantity);
   }
 
