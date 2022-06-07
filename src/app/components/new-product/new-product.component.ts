@@ -20,6 +20,7 @@ export class NewProductComponent implements OnInit {
   public addProduct(){
       console.log(this.name+" "+this.quantity);
       this.productsService.addProduct(this.name,this.quantity);
+      
   }
 
 }
