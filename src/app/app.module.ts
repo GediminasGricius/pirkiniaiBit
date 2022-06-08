@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { ProductsStatisticsComponent } from './components/products-statistics/products-statistics.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 
 
 const appRoutes:Routes=[
   {path:'', component:ProductsListComponent},
-  {path:'new',component:NewProductComponent}
+  {path:'new',component:NewProductComponent},
+  {path:'update/:index',component:UpdateProductComponent}
 ]
 
 @NgModule({
@@ -21,12 +23,14 @@ const appRoutes:Routes=[
     ProductsListComponent,
     NewProductComponent,
     ProductsStatisticsComponent,
-    NavigationComponent
+    NavigationComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
